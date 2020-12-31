@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyB8NVml1-ijgQHKvX2Wl_a1fBLknVB-ok0",
+            authDomain: "todo-app-65192.firebaseapp.com",
+            databaseURL: "https://todo-app-65192.firebaseio.com",
+            projectId: "todo-app-65192",
+            storageBucket: "todo-app-65192.appspot.com",
+            messagingSenderId: "656822619312",
+            appId: "1:656822619312:web:6113531b2cb7c27e3ebf75",
+            measurementId: "G-6GWCKPNH38"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="">
+    </header>
+    <div class="main">
+
+        <div>
+            <h1>TODO LIST</h1>
+        </div>
+
+        <div class="inp">
+            <input id="todo-item" type="text" placeholder="Enter Todo">
+            <hr>
+
+        </div>
+
+        <div>
+            <button onclick="addTodo()" class="btnTodo">ADD ITEM</button>
+            <button onclick="deleteAll()" class="btnTodo">DELETE ALL</button>
+            <ul id="list">
+
+
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
